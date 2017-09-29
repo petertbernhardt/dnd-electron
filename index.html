@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="dndElectron">
   <head>
     <meta charset="UTF-8">
     <title>DND-Electron</title>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
   </head>
   <body>
-    <div class="left col">
-      <div class="header row navi"></div>
-      <div class="body row scroll-y navi">
-          <ul id="navigation" class="list-unstyled"></ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">DND-Electron</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#/characterIdeas">Character Ideas</a></li>
+          <li><a href="#/nameGenerator">Name Generator</a></li>
+          <li><a href="#/spellBook">Spell Book</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
-    <div class="right col">
-      <div id="header" class="header row">
-        <h1>Hello World!</h1>
-      </div>
-      <div class="body row scroll-y">
-          <div id="console"></div>
-          <div id="content"></div>
-      </div>
-      <div class="footer row">
-          <footer>
-              <script>
-              document.write('node ' + process.versions.node + ' - Chromium ' + process.versions.chrome + ' - Electron ' + process.versions.electron)
-              </script>
-          </footer>
-      </div>
-    </div>
+    <div ng-view></div ng-view>
 
     <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
+      window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
     </script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src='./node_modules/bootstrap/dist/js/bootstrap.js'></script>
+    <script src='./node_modules/angular/angular.js'></script>
+    <script src='./node_modules/angular-route/angular-route.js'></script>
+    <script src='./app.js'></script>
+    <script src='./app/templates/mainController.js'></script>
+    <script src='./app/templates/characterIdeas/characterIdeasController.js'></script>
   </body>
 </html>
