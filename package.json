@@ -1,0 +1,19 @@
+{
+  "name": "dnd-electron",
+  "version": "1.0.0",
+  "description": "A minimal Electron application to do simple operations for D&D players.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/petertbernhardt/dnd-electron",
+  "keywords": [
+    "Electron",
+    "dungeons",
+    "dragons"
+  ],
+  "author": "Peter Bernhardt",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  }
+}
