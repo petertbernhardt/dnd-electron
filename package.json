@@ -14,6 +14,7 @@
   ],
   "author": "Peter Bernhardt",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "electron": "~1.7.8"
   }
 }

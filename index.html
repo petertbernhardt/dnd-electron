@@ -3,13 +3,38 @@
   <head>
     <meta charset="UTF-8">
     <title>DND-Electron</title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div class="left col">
+      <div class="header row navi"></div>
+      <div class="body row scroll-y navi">
+          <ul id="navigation" class="list-unstyled"></ul>
+      </div>
+    </div>
+
+    <div class="right col">
+      <div id="header" class="header row">
+        <h1>Hello World!</h1>
+      </div>
+      <div class="body row scroll-y">
+          <div id="console"></div>
+          <div id="content"></div>
+      </div>
+      <div class="footer row">
+          <footer>
+              <script>
+              document.write('node ' + process.versions.node + ' - Chromium ' + process.versions.chrome + ' - Electron ' + process.versions.electron)
+              </script>
+          </footer>
+      </div>
+    </div>
 
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
     </script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
