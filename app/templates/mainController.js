@@ -4,7 +4,8 @@
 
     .controller('MainController',
     	function MainController($scope) {
-        	$scope.array = [1,2,3];
+        	$scope.message = 'Welcome to the D&D Electron app! ' +
+        		'Please select a page from the navigation up top to use this application.';
     	}
 	);
 })();

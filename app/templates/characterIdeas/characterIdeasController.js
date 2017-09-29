@@ -4,7 +4,11 @@
 
     .controller('CharacterIdeasController',
     	function CharacterIdeasController($scope) {
-        	$scope.message = 'characterIdeasController!!!';
+        	$scope.message = 'Randomly generate character ideas!';
+
+        	function generateNew() {
+        		console.log('clicked!');
+        	}
     	}
     );
 })();
