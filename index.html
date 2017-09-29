@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="dndElectron">
+<html>
   <head>
     <meta charset="UTF-8">
     <title>DND-Electron</title>
@@ -7,7 +7,7 @@
     <link href="node_modules/angular-material/angular-material.min.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
   </head>
-  <body>
+  <body ng-app="dndElectron">
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -15,9 +15,9 @@
         </div>
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Home</a></li>
-          <li><a href="#/characterIdeas">Character Ideas</a></li>
-          <li><a href="#/nameGenerator">Name Generator</a></li>
-          <li><a href="#/spellBook">Spell Book</a></li>
+          <li><a href="#!/characterIdeas">Character Ideas</a></li>
+          <li><a href="#!/nameGenerator">Name Generator</a></li>
+          <li><a href="#!/spellBook">Spell Book</a></li>
         </ul>
       </div>
     </nav>

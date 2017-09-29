@@ -12,12 +12,15 @@
             templateUrl: _templateBase + '/main.html',
             controller: 'MainController',
             controllerAs: 'main'
-        });
-        $routeProvider.when('/characterIdeas', {
+        })
+        .when('/characterIdeas', {
             templateUrl: _templateBase + '/characterIdeas/characterIdeas.html' ,
-            controller: 'CharacterIdeasController'
-        });
-        $routeProvider.otherwise({ redirectTo: '/' });
+            controller: 'CharacterIdeasController',
+            controllerAs: 'characterIdeas'
+        })
+        .otherwise({ redirectTo: '/' });
+
+        $locationProvider.html5Mode({enabled: false, requireBase: false});
     }]);
 
 })();
