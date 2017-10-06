@@ -25,7 +25,9 @@
     <div ng-view></div ng-view>
 
     <script>
-      window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
+      if (!window.$) {
+        window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
+      }
     </script>
     <script src='./node_modules/bootstrap/dist/js/bootstrap.js'></script>
     <script src='./node_modules/angular/angular.js'></script>
