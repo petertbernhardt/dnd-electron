@@ -1,6 +1,6 @@
-const _NAMES = [
-	'dragonborn': : {
-		'male': [
+const _NAMES = {
+	'Dragonborn': {
+		'Male': [
 			'Arjhan',
 			'Balasar',
 			'Bharash',
@@ -20,7 +20,7 @@ const _NAMES = [
 			'Tarhun',
 			'Torinn'
 		],
-		'female': [
+		'Female': [
 			'Akra',
 			'Biri',
 			'Daar',
@@ -39,7 +39,7 @@ const _NAMES = [
 			'Thava',
 			'Uadjit'
 		],
-		'surname': [
+		'Surname': [
 			'Clethtinthiallor',
 			'Daardendrian',
 			'Delmirev',
@@ -60,8 +60,8 @@ const _NAMES = [
 			'Yarjerit'
 		]
 	},
-	'dwarf': : {
-		'male': [
+	'Dwarf': {
+		'Male': [
 			'Adrik',
 			'Alberich',
 			'Baern',
@@ -93,7 +93,7 @@ const _NAMES = [
 			'Veit',
 			'Vandal'
 		],
-		'female': [
+		'Female': [
 			'Amber',
 			'Artin',
 			'Audhild',
@@ -118,7 +118,7 @@ const _NAMES = [
 			'Torgga',
 			'Vistra'
 		],
-		'surname': [
+		'Surname': [
 			'Balderk',
 			'Battlehammer',
 			'Brawnanvil',
@@ -136,8 +136,8 @@ const _NAMES = [
 			'Ungart'
 		]
 	},
-	'elf': : {
-		'male': [
+	'Elf': {
+		'Male': [
 			'Adran',
 			'Mar',
 			'Aramil',
@@ -168,7 +168,7 @@ const _NAMES = [
 			'Theren',
 			'Varis'
 		],
-		'female': [
+		'Female': [
 			'Adrie',
 			'Althaea',
 			'Anastrianna',
@@ -199,7 +199,7 @@ const _NAMES = [
 			'Valanthe',
 			'Xanaphia'
 		],
-		'surname': [
+		'Surname': [
 			'Amakiir (Gemflower)',
 			'Amastacia (Starflower)',
 			'Galanodel (Moonwhisper)',
@@ -212,8 +212,8 @@ const _NAMES = [
 			'Xiloscient (Goldpetal)'
 		]
 	},
-	'gnome': : {
-		'male': [
+	'Gnome': {
+		'Male': [
 			'Alston',
 			'Alvyn',
 			'Boddynock',
@@ -238,7 +238,7 @@ const _NAMES = [
 			'Wrenn',
 			'Zook'
 		],
-		'female': [
+		'Female': [
 			'Bimpnottin',
 			'Breena',
 			'Caramip',
@@ -261,7 +261,7 @@ const _NAMES = [
 			'Waywocket',
 			'Zanna'
 		],
-		'surname': [
+		'Surname': [
 			'Beren',
 			'Daergel',
 			'Folkor',
@@ -275,8 +275,8 @@ const _NAMES = [
 			'Turen'
 		]
 	},
-	'halfOrc': : {
-		'male': [
+	'Half-Orc': {
+		'Male': [
 			'Dench',
 			'Feng',
 			'Gell',
@@ -290,7 +290,7 @@ const _NAMES = [
 			'Shump',
 			'Thokk'
 		],
-		'female': [
+		'Female': [
 			'Baggi',
 			'Emen',
 			'Engong',
@@ -306,8 +306,8 @@ const _NAMES = [
 			'Yevelda'
 		]
 	},
-	'halfling': : {
-		'male': [
+	'Halfling': {
+		'Male': [
 			'Alton',
 			'Ander',
 			'Cade',
@@ -326,7 +326,7 @@ const _NAMES = [
 			'Roscoe',
 			'Wellby'
 		],
-		'female': [
+		'Female': [
 			'Andry',
 			'Bree',
 			'Callie',
@@ -346,7 +346,7 @@ const _NAMES = [
 			'Vani',
 			'Verna'
 		],
-		'surname': [
+		'Surname': [
 			'Brushgather',
 			'Goodbarrel',
 			'Greenbottle',
@@ -359,8 +359,8 @@ const _NAMES = [
 			'Underbough'
 		]
 	},
-	'human': {
-		'male': [
+	'Human': {
+		'Male': [
 			'Darvin',
 			'Dorn',
 			'Evendur',
@@ -394,7 +394,7 @@ const _NAMES = [
 			'Taman',
 			'Urth'
 		],
-		'female': [
+		'Female': [
 			'Arveene',
 			'Esvele',
 			'Jhessail',
@@ -421,7 +421,7 @@ const _NAMES = [
 			'Silifrey',
 			'Westra'
 		],
-		'surname': [
+		'Surname': [
 			'Amblecrown',
 			'Buckman',
 			'Dundragon',
@@ -444,8 +444,8 @@ const _NAMES = [
 			'Windriver'
 		]
 	},
-	'tiefling': : {
-		'male': [
+	'Tiefling': {
+		'Male': [
 			'Akmenos',
 			'Amnon',
 			'Barakas',
@@ -461,7 +461,7 @@ const _NAMES = [
 			'Skamos',
 			'Therai'
 		],
-		'female': [
+		'Female': [
 			'Akta',
 			'Anakis',
 			'Bryseis',
@@ -500,4 +500,4 @@ const _NAMES = [
 			'Weary'
 		]
 	}
-];
+};

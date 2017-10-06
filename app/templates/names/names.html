@@ -1,11 +1,12 @@
 <div class="jumbotron text-center">
   <h1>Character Names</h1>
   <p>{{ ::message }}</p>
-  <p>{{ characterName }}</p>
   <select ng-model="selectedRace"
 	ng-options="race for race in races">
   </select>
+  <select ng-model="selectedGender"
+  	ng-options="gender for gender in genders">
+  </select>
   <button ng-click="generateNew()">New Name</button>
+  <p>{{ characterName }}</p>
 </div>
-<script src="./app/data/names.js"></script>
-<script src="./app/data/races.js"></script>
