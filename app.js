@@ -18,6 +18,11 @@
             controller: 'CharacterIdeasController',
             controllerAs: 'characterIdeas'
         })
+        .when('/names', {
+            templateUrl: _templateBase + '/names/names.html',
+            controller: 'NamesController',
+            controllerAs: 'names'
+        })
         .otherwise({ redirectTo: '/' });
 
         $locationProvider.html5Mode({enabled: false, requireBase: false});
