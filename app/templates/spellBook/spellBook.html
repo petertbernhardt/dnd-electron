@@ -1,0 +1,41 @@
+<div class="jumbotron text-center">
+  <h1>Spell Book</h1>
+  <p>{{ ::message }}</p>
+  <!-- There should be a form to insert new spells -->
+  <form ng-submit="addSpell(spell)">
+  	<input type="number" ng-model="spell.level" placeholder="Spell Number">
+  	<input type="text" ng-model="spell.name" placeholder="Spell Name">
+	<select ng-model="spell.components"
+		ng-options="component for component in components">
+		<option value=''>Spell Components</option>
+	</select>
+  	<button type="submit" class="btn btn-info">Add</button>
+  </form>
+  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+    <thead>
+      <tr>
+	    <th st-sort="level">Level</th>
+	    <th st-sort="name">Name</th>
+	    <th st-sort="components">Components</th>
+	    <th>Edit</th>
+  	  </tr>
+	  <tr>
+		<th>
+		  <input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+		</th>
+	  </tr>
+	</thead>
+	<tbody>
+  	  <tr ng-repeat="row in displayedCollection">
+  	    <td>{{row.level}}</td>
+        <td>{{row.name}}</td>
+  	    <td>{{row.components}}</td>
+  	    <td>
+  	    	<button class="btn btn-default" ng-click="editRow(row)">Edit</button>
+  	    </td>
+   	  </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-info" ng-click="loadSpellBook()">Load</button>
+  <button class="btn btn-primary" ng-click="saveSpellBook()">Save</button>
+</div>

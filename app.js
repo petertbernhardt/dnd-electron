@@ -4,9 +4,12 @@
     var _templateBase = './app/templates';
 
     angular.module('dndElectron', [
-        'ngRoute'
+        'LocalStorageModule',
+        'ngRoute',
+        'smart-table'
     ])
-    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    .config(['$routeProvider', '$locationProvider', 'localStorageServiceProvider',
+        function ($routeProvider, $locationProvider, localStorageServiceProvider) {
 
         $routeProvider.when('/', {
             templateUrl: _templateBase + '/main.html',
@@ -23,9 +26,16 @@
             controller: 'NamesController',
             controllerAs: 'names'
         })
+        .when('/spellBook', {
+            templateUrl: _templateBase + '/spellBook/spellBook.html',
+            controller: 'SpellBookController',
+            controllerAs: 'spellBook'
+        })
         .otherwise({ redirectTo: '/' });
 
         $locationProvider.html5Mode({enabled: false, requireBase: false});
+
+        localStorageServiceProvider.setPrefix('dndElectron');
     }]);
 
 })();
