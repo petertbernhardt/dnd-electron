@@ -10,10 +10,19 @@
 
             $scope.components = _COMPONENTS;
 
+            $scope.itemsByPage = 10;
+            $scope.displayedPages = 5;
+
             $scope.addSpell = function(spell) {
                 if (spell && spell.name && spell.components &&
                     (spell.level >= 0 && spell.level <= 9)) {
-                    $scope.rowCollection.push(spell);
+                    let newSpell = {
+                        'level': spell.level,
+                        'name': spell.name,
+                        'components': spell.components
+                    };
+                    $scope.rowCollection.push(newSpell);
+                    $scope.spell = {};
                 }
             };
 
@@ -21,8 +30,11 @@
                 console.log('edit', row);
             };
 
-            $scope.delete = function() {
-                console.log('delete clicked');
+            $scope.deleteRow = function(row) {
+                let index = $scope.rowCollection.indexOf(row);
+                if (index !== -1) {
+                    $scope.rowCollection.splice(index, 1);
+                }
             };
 
             $scope.loadSpellBook = function() {

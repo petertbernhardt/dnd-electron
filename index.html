@@ -14,7 +14,6 @@
           <a class="navbar-brand" href="#">DND-Electron</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
           <li><a href="#!/characterIdeas">Character Ideas</a></li>
           <li><a href="#!/names">Name Generator</a></li>
           <li><a href="#!/spellBook">Spell Book</a></li>
@@ -27,6 +26,10 @@
     <script>
       if (!window.$) {
         window.$ = window.jQuery = require('./node_modules/jquery/dist/jquery.js');
+        $(document).ready(function() {
+          $('li.active').removeClass('active');
+          $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+        });
       }
     </script>
     <script src='./node_modules/bootstrap/dist/js/bootstrap.js'></script>

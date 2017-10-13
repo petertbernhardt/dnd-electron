@@ -2,10 +2,10 @@
   <h1>Character Names</h1>
   <p>{{ ::message }}</p>
   <select ng-model="selectedRace"
-	ng-options="race for race in races">
+    ng-options="race for race in races">
   </select>
   <select ng-model="selectedGender"
-  	ng-options="gender for gender in genders">
+    ng-options="gender for gender in genders">
   </select>
   <button ng-click="generateNew()">New Name</button>
   <p>{{ characterName }}</p>
