@@ -31,6 +31,11 @@
             controller: 'SpellBookController',
             controllerAs: 'spellBook'
         })
+        .when('/packOfPossessions', {
+            templateUrl: _templateBase + '/packOfPossessions/packOfPossessions.html',
+            controller: 'PackOfPossessionsController',
+            controllerAs: 'packOfPossessions'
+        })
         .otherwise({ redirectTo: '/' });
 
         $locationProvider.html5Mode({enabled: false, requireBase: false});

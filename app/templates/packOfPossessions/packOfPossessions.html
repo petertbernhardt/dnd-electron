@@ -1,0 +1,73 @@
+<div class="jumbotron text-center">
+  <h1>Pack of Possessions</h1>
+  <p>{{ ::message }}</p>
+</div>
+<div class="container-fluid text-center">
+  <!-- There should be a form to insert new items -->
+  <form ng-submit="addItem(item)">
+    <input type="number" ng-model="item.amount" placeholder="Item Amount">
+    <input type="text" ng-model="item.name" placeholder="Item Name">
+    <button type="submit" class="btn btn-info">Add</button>
+  </form>
+  <table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+    <thead>
+      <tr class="text-center">
+        <th st-sort="amount">Amount</th>
+        <th st-sort="name">Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    <tr>
+    <th>
+      <input st-search placeholder="global search" class="input-sm form-control" type="search"/>
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="row in displayedCollection">
+        <td>
+          <div ng-show="!row.editMode">
+            {{row.amount}}
+          </div>
+          <div ng-show="row.editMode">
+            <input type="number" ng-model="row.amount">
+          </div>
+        </td>
+        <td>
+          <div ng-show="!row.editMode">
+            {{row.name}}
+          </div>
+          <div ng-show="row.editMode">
+            <input type="text" ng-model="row.name">
+          </div>
+        </td>
+        <td>
+          <button ng-show="!row.editMode" 
+            class="btn btn-default" 
+            ng-click="row.editMode = true;">
+            Edit
+          </button>
+          <button ng-show="row.editMode"
+            class="btn btn-default"
+            ng-click="row.editMode = false;">
+            Save Changes
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" ng-click="deleteRow(row)">
+            <i class="glyphicon glyphicon-remove-circle"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="5" class="text-center">
+          <div st-pagination="" st-items-by-page="itemsByPage" st-displayed-pages="displayedPages"></div>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+  <button class="btn btn-info" ng-click="loadPack()">Load</button>
+  <button class="btn btn-primary" ng-click="savePack()">Save</button>
+</div>
