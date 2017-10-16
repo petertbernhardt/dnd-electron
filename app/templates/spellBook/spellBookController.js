@@ -26,10 +26,6 @@
                 }
             };
 
-            $scope.editRow = function(row) {
-                console.log('edit', row);
-            };
-
             $scope.deleteRow = function(row) {
                 let index = $scope.rowCollection.indexOf(row);
                 if (index !== -1) {
@@ -38,7 +34,9 @@
             };
 
             $scope.loadSpellBook = function() {
-                $scope.rowCollection = SpellBookService.loadSpellBook();
+                if (SpellBookService.loadSpellBook()) {
+                    $scope.rowCollection = SpellBookService.loadSpellBook();
+                }
             };
 
             $scope.saveSpellBook = function() {

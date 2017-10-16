@@ -30,11 +30,44 @@
   </thead>
   <tbody>
       <tr ng-repeat="row in displayedCollection">
-        <td>{{row.level}}</td>
-        <td>{{row.name}}</td>
-        <td>{{row.components}}</td>
         <td>
-          <button class="btn btn-default" ng-click="editRow(row)">Edit</button>
+          <div ng-show="!row.editMode">
+            {{row.level}}
+          </div>
+          <div ng-show="row.editMode">
+            <input type="number" ng-model="row.level">
+          </div>
+        </td>
+        <td>
+          <div ng-show="!row.editMode">
+            {{row.name}}
+          </div>
+          <div ng-show="row.editMode">
+            <input type="text" ng-model="row.name">
+          </div>
+        </td>
+        <td>
+          <div ng-show="!row.editMode">
+            {{row.components}}
+          </div>
+          <div ng-show="row.editMode">
+            <select ng-model="row.components"
+              ng-options="component for component in components">
+              <option value=''>Spell Components</option>
+            </select>
+          </div>
+        </td>
+        <td>
+          <button ng-show="!row.editMode" 
+            class="btn btn-default" 
+            ng-click="row.editMode = true;">
+            Edit
+          </button>
+          <button ng-show="row.editMode" 
+            class="btn btn-default" 
+            ng-click="row.editMode = false;">
+            Save Changes
+          </button>
         </td>
         <td>
           <button class="btn btn-danger" ng-click="deleteRow(row)">

@@ -32,7 +32,9 @@
             };
 
             $scope.loadPack = function() {
-                $scope.rowCollection = PackOfPossessionsService.loadPack();
+                if (PackOfPossessionsService.loadPack()) {
+                    $scope.rowCollection = PackOfPossessionsService.loadPack();
+                }
             };
 
             $scope.savePack = function() {
