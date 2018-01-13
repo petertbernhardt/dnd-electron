@@ -21,20 +21,25 @@
             controller: 'CharacterIdeasController',
             controllerAs: 'characterIdeas'
         })
+        .when('/deathTable', {
+            templateUrl: _templateBase + '/deathTable/deathTable.html',
+            controller: 'DeathTableController',
+            controllerAs: 'deathTable'
+        })
         .when('/names', {
             templateUrl: _templateBase + '/names/names.html',
             controller: 'NamesController',
             controllerAs: 'names'
         })
-        .when('/spellBook', {
-            templateUrl: _templateBase + '/spellBook/spellBook.html',
-            controller: 'SpellBookController',
-            controllerAs: 'spellBook'
-        })
         .when('/packOfPossessions', {
             templateUrl: _templateBase + '/packOfPossessions/packOfPossessions.html',
             controller: 'PackOfPossessionsController',
             controllerAs: 'packOfPossessions'
+        })
+        .when('/spellBook', {
+            templateUrl: _templateBase + '/spellBook/spellBook.html',
+            controller: 'SpellBookController',
+            controllerAs: 'spellBook'
         })
         .otherwise({ redirectTo: '/' });
 

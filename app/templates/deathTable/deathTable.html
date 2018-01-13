@@ -1,7 +1,17 @@
 <div class="jumbotron text-center">
     <h1>Death Table</h1>
     <p>{{ ::message }}</p>
+    <pre>
+        {{ selectedDamageType }}
+        {{ deathTableRoll }}
+        {{ result }}
+    </pre>
     <select ng-model="selectedDamageType"
         ng-options="damageType for damageType in damageTypes">
+        <option value=''>Damage Types</option>
     </select>
+    <input type="number"
+        ng-model="deathTableRoll"
+        placeholder="Death Table Roll"/>
+    <button ng-click="showResult()">Show Result</button>
 </div>

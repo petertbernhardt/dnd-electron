@@ -1,5 +1,5 @@
 const _DEATH_TABLE = {
-    "slashing": {
+    "Edged and Slashing Weapons": {
         "1": "(No Entry)",
         "2": "You get a cool scar in the place of your choosing. ",
         "3": "The edge scrapes across a knuckle. The stinging pain causes you to drop anything held in that hand. Bleed 1.",
@@ -38,7 +38,7 @@ const _DEATH_TABLE = {
         "36": "You are cut in twain, and if there is a shaft nearby, you fall down it.",
         "37": "36+ as 36."
     },
-    "bludgeoning": {
+    "Blunt, Crushing, and Smashing Weapons": {
         "1": "(No Entry)",
         "2": "Bash leaves a bruise at a location of the player’s choosing",
         "3": "Your knuckles deftly block the blow. Drop anything held in that hand. Pain 1.",
@@ -77,7 +77,7 @@ const _DEATH_TABLE = {
         "36": "A titanic swing breaks close to 50 bones. Instant death and body is pulverized and difficult to move.",
         "37": "36+ as 36"
     },
-    "piercing": {
+    "Puncturing, Stabbing, and Piercing Weapons": {
         "1": "(No Entry)",
         "2": "Nicked! A small scar is left at the location of the player’s choosing.",
         "3": "The point glances off a knuckle-bone. The impact causes you to drop anything held in that hand.",
@@ -116,7 +116,7 @@ const _DEATH_TABLE = {
         "36": "Your helm is destroyed and the top of your head is sliced off. You spend your last moments feeling quite strange.",
         "37": "36+ as 36 "
     },
-    "teethClaws": {
+    "Teath and Claws": {
         "1": "(No Entry)",
         "2": "Clipped by a tooth! A small bite or claw mark is left at the location of the player’s choosing.",
         "3": "A quick snap doesn’t break the skin on your hand. The shock causes you to drop anything held in that hand.",
@@ -155,7 +155,7 @@ const _DEATH_TABLE = {
         "36": "Everything goes black. Your companions stand in shock as each is hit with a large chunk of your destroyed body. All allies Stunned for 1 round.",
         "37":"36+ as 36"
     },
-    "fireAcidLightningEnergy": {
+    "Fire, Acid, Lightning, and Energy": {
         "1": "(No Entry)",
         "2": "Singed! A small burn scar is left at the location of the player’s choosing.",
         "3": "In your haste to cover your face, you let go of what you’re holding. Drop anything held in your hands.",
@@ -194,7 +194,7 @@ const _DEATH_TABLE = {
         "36": "There is a blinding flash, and nothing remains of you, except perhaps a smoking pair of boots.",
         "37": "36+ as 36"
     },
-    "coldNether": {
+    "Cold and Nether": {
         "1": "(No Entry)",
         "2": "Chilled! A small frostburn scar is left at the location of the player’s choosing.",
         "3": "You get struck in the chest, and clutch your hands to your torso in an effort to stop the burning cold. Drop anything held in your hands.",
